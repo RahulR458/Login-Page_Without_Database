@@ -1,0 +1,62 @@
+<%-include('header')-%>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- 
+<div class="text-center center-div" id="login">
+    <div class="container border py-5">
+      <div class="title pb-5">
+        <h2 class="font-weight-bold">Login System</h2>
+        <span>Log in for the existing user</span>
+        <% if(locals.logout) { %>
+          <div class="alert alert-success text-center mt-3">
+            <%= logout %>
+          </div>
+        <% } %>
+      </div>
+      <form action="/route/login" method="post" class="pt-3">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email" name="email">
+          <small class="form-text text-muted text-left">Enter your registered email address</small>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" value="admin123" name="password" placeholder="Password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+      </form>
+    </div>
+  </div> -->
+  <div class="text-center center-div" id="login">
+    <div class="container border py-5 mx-auto col-lg-4 col-md-6" id="bor">
+      <div class="title pb-5">
+        <h2 class="font-weight-bold">Login System</h2>
+        <span>Log in for the existing user</span>
+        <% if(locals.logout) { %>
+          <div class="alert alert-success text-center mt-3">
+            <%= logout %>
+          </div>
+        <% } %>
+        <% if(locals.error) { %>
+          <div class="alert alert-danger text-center mt-3">
+            <%= locals.error %>
+          </div>
+        <% } %>
+      </div>
+      <form action="/login" method="post" class="pt-3">
+        <div class="form-group">
+          <input type="email" class="form-control mx-auto d-flex" placeholder="Email" name="email">
+          <small class="form-text text-muted text-black-50">Enter your registered email address</small>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control mx-auto d-flex" value="admin123" name="password" placeholder="Password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+<%-include('footer')-%>
